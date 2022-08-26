@@ -55,7 +55,7 @@ Each 2D slice will have its own subdirectory in output_dir named by slice name. 
     morse_dir = “results/likelihood-morse/”  
     dm.compute_persistence_single_channel(likelihood_dir, morse_dir)  
 
-
+![](assets/persistenceSingleChannel.png)
 
 ### DiMo2d.generate_morse_graphs(input_path,  binary_dir, ve_persistence_threshold=0, et_persistence_threshold=64, threads=1)
 
@@ -84,7 +84,7 @@ Compute discrete Morse graph reconstruction for each 2D slice.  Graphs are inter
     dm.compute_persistence_single_channel(likelihood_dir, morse_dir)  
     dm.generate_morse_graphs(morse_dir, binary_dir, 0, 64)  
 
-
+![](assets/generateMorseGraph.png)
 
 ### DiMo2d.postprocess_graphs(input_path, ve_persistence_threshold=0, et_persistence_threshold=64, threads=1)
 
@@ -113,7 +113,7 @@ Apply haircut to remove non-degree 2 paths with a node of degree 1 that change d
     dm.generate_morse_graphs(morse_dir, binary_dir, 0, 64)  
     dm.postprocess_graphs(morse_dir, 0, 64)  
 
-
+![](assets/postProcessGraphs.png)
 
 ### DiMo2d.cshl_post_results(input_path, output_dir, ve_persistence_threshold=0, et_persistence_threshold=64, threads=1)
 
@@ -145,7 +145,7 @@ Format graphs of each slice to geojson and ready to post to CSHL webviewer
     dm.postprocess_graphs(morse_dir, 0, 64)
     dm.cshl_post_results(morse_dir, json_dir, 0, 64)
 
-
+![](assets/postResults.png)
 
 ### DiMo2d.write_vtp_graph(input_dir, output_filename, ve_persistence_threshold=0, et_persistence_threshold=64)
 
